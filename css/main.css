@@ -1,0 +1,57 @@
+.catalog__cards{
+   display: flex;
+   flex-wrap: wrap;
+}
+.catalog__card {
+   max-width: 210px;
+   background: #FFFFFF;
+   border: 1px solid #E7E6E6;
+   border-radius: 10px;
+   text-align: center;
+   padding: 30px;
+   margin: 15px;
+}
+
+.catalog__card a {
+   color: #1E1E1E;
+   text-decoration: none;
+   text-align: initial;
+}
+.catalog__card-img{
+   margin-bottom: 30px;
+}
+.catalog__card-descr {
+   font-style: normal;
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 14px;
+   color: #76737D;
+   margin-bottom: 5px;
+}
+
+.catalog__card-price {
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 22px;
+   display: flex;
+   align-items: center;
+   color: #176975;
+}
+
+.catalog__card-cash {
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 17px;
+   color: #0D727E;
+}
+.catalog__card-title{
+   font-weight: 700;
+   font-size: 16px;
+   margin-bottom: 5px;
+}
+.catalog__top-title{
+   font-weight: 700;
+font-size: 30px;
+line-height: 37px;
+color: #1E1E1E;
+}

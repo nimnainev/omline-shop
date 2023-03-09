@@ -1,3 +1,6 @@
+body{
+   font: 1.625em/2em "PTSans-Regular";
+}
 body .content .container .content__aside {
    -ms-grid-row: 1;
    -ms-grid-row-span: 3;
@@ -61,6 +64,15 @@ body .content .container .content__aside div ul li a {
    color: #0e3a40;
    text-decoration: none
 }
+
+
+/* styles new */
+
+
+
+
+
+
 
 body .content .container .content__aside div ul li a:hover,
 body .contentAddres__contactForm .contacts p a:hover {
@@ -2096,7 +2108,7 @@ body .catalog .container .content__catalog .catalog__goods div {
    border: 1px solid #e6e6e6;
    border-radius: 5px;
    -webkit-box-sizing: border-box;
-   box-sizing: border-box
+   box-sizing: border-box;
 }
 
 body .catalog .container .content__catalog .catalog__goods div a {
@@ -2146,7 +2158,6 @@ body .product__card .container .content__productCard__analogue .videoSurveillanc
 body .product__card .container .content__recomend .slider ul li a p {
    padding: 10px;
    font: 1em/1.125em "PTSans-Regular";
-   color: #0e3a40;
    text-align: left
 }
 
@@ -4799,3 +4810,6 @@ body .error404 .container .content__error ul li:nth-child(3) a {
 }
 
 /*# sourceMappingURL=maps/style.css.map */
+
+
+
