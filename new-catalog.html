@@ -60,12 +60,23 @@
          </div>
       </div>
    </div>
-
+   <div class="catalog__top">
+      <div class="catalog__top-container">
+         <nav class="catalog__breadcrumb breadcrumb">
+            <ul>
+                <li class="catalog__breadcrumb-item">
+                  <a class="catalog__breadcrumb-link" href="#">Home</a>
+               </li>
+                <li class="catalog__breadcrumb-item"><span>Лікарські засоби</span></li>
+            </ul>
+        </nav>
+      <h5 class="catalog__top-title">Ліки від застуди та ГРВІ</h5>
+      </div>
+   </div>
    <div class="content catalog">
+     
       <div class="container">
-         <!-- <div class="catalog__top">
-            <h5 class="catalog__top-title">Ліки від застуди та ГРВІ</h5>
-         </div> -->
+      
 
          <div class="catalog__asides">
             <div class="catalog__item">
@@ -180,26 +191,30 @@
             </div>
             <div class="catalog__item">
                <ul class="catalog__accordion accordion-menu">
-                  <li>
+                  <li class="open">
                      <div class="catalog__accordion-title dropdownlink">
                         Ціна
-
                         <img src="img/arrow.svg" class="fa fa-chevron-down">
                      </div>
-                     <div class="catalog__accordion-list submenuItems">
-                        <price-range currency="$">
-                           <div>
-                              <div>
-                                 <input name="price-from" type="range" min="0" max="100" step="1" value="25"
-                                    aria-label="From" />
-                                 <input name="price-to" type="range" min="0" max="100" step="1" value="75"
-                                    aria-label="To" />
-                              </div>
+                     <div class="catalog__accordion-list submenuItems" style="display: block;">
+                        <div class="wrapper">
+                           <div class="price-input">
+                             <div class="field">
+                               <input type="number" class="input-min" value="2500">
+                             </div>
+                             <div class="separator">-</div>
+                             <div class="field">
+                               <input type="number" class="input-max" value="7500">
+                             </div>
                            </div>
-                           <output>
-                              output
-                           </output>
-                        </price-range>
+                           <div class="sliders">
+                             <div class="progress"></div>
+                           </div>
+                           <div class="range-input">
+                             <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                             <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                           </div>
+                         </div>
                      </div>
                   </li>
 
@@ -209,13 +224,13 @@
             </div>
             <div class="catalog__item">
                <ul class="catalog__accordion accordion-menu">
-                  <li>
+                  <li class="open">
                      <div class="catalog__accordion-title dropdownlink">
                         Форма випуску
 
                         <img src="img/arrow.svg" class="fa fa-chevron-down">
                      </div>
-                     <div class="catalog__accordion-list catalog__submenuItems">
+                     <div class="catalog__accordion-list catalog__submenuItems submenuItems"  style="display: block;">
                         <label class="catalog__checkbox checkbox-container">Капсули<span>(16)</span>
                            <input type="checkbox" checked="checked" class="check-highload">
                            <span class="highload2"></span>
@@ -241,13 +256,13 @@
             </div>
             <div class="catalog__item">
                <ul class="catalog__accordion accordion-menu">
-                  <li>
+                  <li class="open"> 
                      <div class="catalog__accordion-title dropdownlink">
                         Країна-виробник
 
                         <img src="img/arrow.svg" class="fa fa-chevron-down">
                      </div>
-                     <div class="catalog__accordion-list catalog__submenuItems">
+                     <div class="catalog__accordion-list catalog__submenuItems submenuItems"  style="display: block;">
                         <label class="catalog__checkbox checkbox-container">Іспанія<span>(16)</span>
                            <input type="checkbox" checked="checked" class="check-highload">
                            <span class="highload2"></span>
@@ -285,12 +300,12 @@
             </div>
             <div class="catalog__item">
                <ul class="catalog__accordion accordion-menu">
-                  <li>
+                  <li class="open">
                      <div class="catalog__accordion-title dropdownlink">
                         Умови відпуску
                         <img src="img/arrow.svg" class="fa fa-chevron-down">
                      </div>
-                     <div class="catalog__accordion-list catalog__submenuItems">
+                     <div class="catalog__accordion-list catalog__submenuItems submenuItems"  style="display: block;">
                         <label class="catalog__checkbox checkbox-container">За рецептом<span>(9)</span>
                            <input type="checkbox" checked="checked" class="check-highload">
                            <span class="highload2"></span>
@@ -308,75 +323,143 @@
             </div>
          </div>
 
-
-         <div class="content__catalog">
-            <div class="catalog__options">
-               <div class="catalog__options__goods">
-                  <p>Товарiв:&nbsp;&nbsp;<span>358</span></p><select name="packaging">
-                     <option>Всі форми випуску</option>
-                     <option>Упаковка</option>
-                     <option>Пластина</option>
-                  </select><select name="manufacturers">
-                     <option>Всі виробники</option>
-                     <option>ХИНОИН ПРАЙВИТ ЛТД</option>
-                     <option>ХИНОИН ПРАЙВИТ ЛТД</option>
-                  </select>
-               </div>
-               <div class="catalog__options__sortBy">
-                  <p>Сортування:&nbsp;&nbsp;</p><select name="rating">
-                     <option>Популярність</option>
-                     <option>Цiна</option>
-                     <option>Наявнiсть</option>
-                  </select>
-               </div>
-               <div class="mobile">
-                  <p>Товарiв:&nbsp;&nbsp;<span>358</span></p><span id="mobileSort"
-                     class="mobileSort">Сортування&nbsp;&nbsp;<i class="icon-down-arrow"></i></span>
-               </div>
-               <div style="display: none">
-                  <div id="catalog__options__mobile" class="catalog__options__mobile"><i id="mobileSortClose"
-                        class="icon-cancel"></i>
-                     <ul>
-                        <li>
-                           <h6>Форма випуску</h6><input id="pk1" type="radio" name="packaging" value="Всі форми випуску"
-                              checked><label for="pk1"><span></span>
-                              <p>Всі форми випуску</p>
-                           </label><input id="pk2" type="radio" name="packaging" value="Упаковка"><label
-                              for="pk2"><span></span>
-                              <p>Упаковка</p>
-                           </label><input id="pk3" type="radio" name="packaging" value="Пластина"><label
-                              for="pk3"><span></span>
-                              <p>Пластина</p>
-                           </label>
-                        </li>
-                        <li>
-                           <h6>Виробник</h6><input id="mn1" type="radio" name="manufacturers" value="Всі виробники"
-                              checked><label for="mn1"><span></span>
-                              <p>Всі виробники</p>
-                           </label><input id="mn2" type="radio" name="manufacturers" value="ХИНОИН ПРАЙВИТ ЛТД"><label
-                              for="mn2"><span></span>
-                              <p>ХИНОИН ПРАЙВИТ ЛТД</p>
-                           </label><input id="mn3" type="radio" name="manufacturers" value="ХИНОИН ПРАЙВИТ ЛТД"><label
-                              for="mn3"><span></span>
-                              <p>ХИНОИН ПРАЙВИТ ЛТД</p>
-                           </label>
-                        </li>
-                        <li>
-                           <h6>Сортування</h6><input id="rt1" type="radio" name="rating" value="Популярність"
-                              checked><label for="rt1"><span></span>
-                              <p>Популярність</p>
-                           </label><input id="rt2" type="radio" name="rating" value="Цiна"><label
-                              for="rt2"><span></span>
-                              <p>Цiна</p>
-                           </label><input id="rt3" type="radio" name="rating" value="Наявнiсть"><label
-                              for="rt3"><span></span>
-                              <p>Наявнiсть</p>
-                           </label>
-                        </li>
-                     </ul>
-                     <div><a id="back" href="#">Повернутися</a><a id="next" href="#">Продовжити</a></div>
+         <div style="display: none">
+            <div id="personalCabinet" class="authorization">
+               <div id="authorTabs" class="typeOfAuthor">
+                  <ul>
+                     <li><a href="#tabs-1">Авторизація</a></li>
+                     <li><a href="#tabs-2">Реєстрація</a></li>
+                  </ul>
+                  <div id="tabs-1" class="author">
+                     <form id="authorization" action="" method="post">
+                        <p><i class="icon-specialist-user user"></i><input type="text" name="name" placeholder="Логін"><i
+                              class="icon-asterisk asterisk"></i></p>
+                        <p><i class="icon-protection-shield shield"></i><input type="password" name="password"
+                              placeholder="Пароль"><i class="icon-asterisk asterisk"></i></p>
+                        <p><label><input type="checkbox" name="checkbox" class="checkbox"><span
+                                 class="checkbox-custom"></span><span class="label">&nbsp;&nbsp;Запам’ятати
+                                 мене</span></label></p>
+                        <p>CAPTCHA</p><button type="submit">Вхід</button>
+                     </form><a href="#">Забули пароль?</a>
+                  </div>
+                  <div id="tabs-2" class="regist">
+                     <form id="registration">
+                        <p><i class="icon-specialist-user user"></i><input type="text" name="name" placeholder="ПIБ"><i
+                              class="icon-asterisk asterisk"></i></p>
+                        <p><i class="icon-telephone-handle-silhouette phone"></i><input type="tel" name="tel"
+                              placeholder="тел." class="js-phone"><i class="icon-asterisk asterisk"></i></p>
+                        <p><i class="icon-envelope envelope"></i><input type="email" name="email" placeholder="email"><i
+                              class="icon-asterisk asterisk"></i></p>
+                        <p><select name="city">
+                              <option disabled selected hidden>Виберiть мiсто</option>
+                              <option>Хмельницький</option>
+                              <option>Рiвне</option>
+                           </select></p>
+                        <p>CAPTCHA</p><button type="submit">Зареєструватися</button>
+                     </form>
+                     <div style="display: none">
+                        <div id="authorizationConfirm">
+                           <p>Вітаємо!</p><span>Реєстрація пройшла успішно.<br>Ви можете увійти на сайт за допомогою своїх
+                              даних.</span><button type="button">ПРОДОВЖИТИ</button>
+                        </div>
+                     </div>
                   </div>
                </div>
+               <div class="socialAuthor">
+                  <p>Увійти за допомогою соцмереж</p>
+                  <ul>
+                     <li><a href="https://www.facebook.com/" class="facebook"><i
+                              class="icon-facebook-logo"></i>&nbsp;&nbsp;Facebook</a></li>
+                     <li><a href="https://plus.google.com/" class="gPlus"><i
+                              class="icon-google-plus-logo"></i>&nbsp;&nbsp;Google+</a></li>
+                  </ul>
+               </div>
+               <div class="close">
+                  <p id="authorizationClose">Повернутися до пошуку</p>
+               </div>
+            </div>
+            <div id="order"><i id="orderClose" class="icon-cancel"></i>
+               <h5>Доставка і оплата</h5><br>
+               <p>Лікарські засоби і вироби медичного призначення. Лише сертифікована
+                  продукція в Хмельницькому і по всій Україні.</p><br>
+               <ul>
+                  <li>Наполните корзину и оформите заказ, используя специальные
+                     формы. Используйте этот способ, если вы собираетесь заказать
+                     более одного наименования товара. Форма организована в три
+                     простых шага:</li>
+                  <li>Выбор города и доступного для этого города способа доставки</li>
+                  <li>Указание адреса доставки: выбор пункта выдачи или заполнение
+                     формы данными для адресной доставки</li>
+                  <li>Форма персональных данных заказчика</li>
+               </ul>
+               <p>Выберите товар и на странице "наличие и бронь в аптеках" оформите
+                  бронь в одной из наших точек. Система предлагает только те аптеки,
+                  где товар имеется в наличии. При этом вы сможете забронировать только
+                  доступное (на момент оформления заказа) количество товара в выбранной
+                  точке.</p><br>
+               <p>Дополнительно рекомендуем ознакомится со специальным режимом работы
+                  сайта "Ваша аптека", который отображает товары с позиции наличия в
+                  выбранной аптеке.</p><br>
+               <p>Важно! Основные "фишки" нашей корзины!</p>
+            </div>
+            <div id="delivery"><i id="deliveryClose" class="icon-cancel"></i>
+               <h5>Доставка і оплата</h5><br>
+               <p>Лікарські засоби і вироби медичного призначення. Лише сертифікована
+                  продукція в Хмельницькому і по всій Україні.</p><br>
+               <ul>
+                  <li>Наполните корзину и оформите заказ, используя специальные
+                     формы. Используйте этот способ, если вы собираетесь заказать
+                     более одного наименования товара. Форма организована в три
+                     простых шага:</li>
+                  <li>Выбор города и доступного для этого города способа доставки</li>
+                  <li>Указание адреса доставки: выбор пункта выдачи или заполнение
+                     формы данными для адресной доставки</li>
+                  <li>Форма персональных данных заказчика</li>
+               </ul>
+               <p>Выберите товар и на странице "наличие и бронь в аптеках" оформите
+                  бронь в одной из наших точек. Система предлагает только те аптеки,
+                  где товар имеется в наличии. При этом вы сможете забронировать только
+                  доступное (на момент оформления заказа) количество товара в выбранной
+                  точке.</p><br>
+               <p>Дополнительно рекомендуем ознакомится со специальным режимом работы
+                  сайта "Ваша аптека", который отображает товары с позиции наличия в
+                  выбранной аптеке.</p><br>
+               <p>Важно! Основные "фишки" нашей корзины!</p>
+            </div>
+            <div id="underOrder"><i id="underOrderClose" class="icon-cancel"></i>
+               <h5>Доставка і оплата</h5><br>
+               <p>Лікарські засоби і вироби медичного призначення. Лише сертифікована
+                  продукція в Хмельницькому і по всій Україні.</p><br>
+               <ul>
+                  <li>Наполните корзину и оформите заказ, используя специальные
+                     формы. Используйте этот способ, если вы собираетесь заказать
+                     более одного наименования товара. Форма организована в три
+                     простых шага:</li>
+                  <li>Выбор города и доступного для этого города способа доставки</li>
+                  <li>Указание адреса доставки: выбор пункта выдачи или заполнение
+                     формы данными для адресной доставки</li>
+                  <li>Форма персональных данных заказчика</li>
+               </ul>
+               <p>Выберите товар и на странице "наличие и бронь в аптеках" оформите
+                  бронь в одной из наших точек. Система предлагает только те аптеки,
+                  где товар имеется в наличии. При этом вы сможете забронировать только
+                  доступное (на момент оформления заказа) количество товара в выбранной
+                  точке.</p><br>
+               <p>Дополнительно рекомендуем ознакомится со специальным режимом работы
+                  сайта "Ваша аптека", который отображает товары с позиции наличия в
+                  выбранной аптеке.</p><br>
+               <p>Важно! Основные "фишки" нашей корзины!</p>
+            </div>
+         </div>
+         <div class="content__catalog">
+            <div class="catalog__filtrs">
+               <form class="catalog__filtrs-form">
+                  <label for="catalog-select" class="catalog__filtrs-label">Сортувати за:</label>
+                  <select id="catalog-select" class="catalog__filtrs-select">
+                     <option class="catalog__filtrs-option">Від дешевих до дорогих</option>
+                     <option>Від дешевих до дорогих</option>
+                  </select>
+               </form>
             </div>
             <!-- <div class="catalog__goods">
                <div class="catalog__cards"><a href="product_card.html"><img src="img/products/card-1.jpg" alt="">
@@ -586,9 +669,7 @@
                      <p class="catalog__card-price">206,70 грн</p>
                      <p class="catalog__card-cash">В наявності</p>
                   </a>
-                  <!-- <div class="hover"><button title="Додати в корзину" class="addBusket"><i
-                        class="icon-shopping-cart"></i><span>В корзину</span></button><button title="Додати в обране"
-                     class="addFavorite"><i class="icon-heart"></i></button></div> -->
+                 
                </div>
                <div class="catalog__card">
                   <a href="product_card.html">
@@ -724,18 +805,12 @@
                </div>
 
             </div>
-            <div class="catalog__paginator">
-               <ul class="desktop">
+            <div class="catalog__paginator catalog__paginator--on">
+               <ul class="catalog__paginato">
                   <li><a href="#"><i class="icon-left-arrow"></i></a></li>
-                  <li><a href="#" class="active">1</a></li>
-                  <li><a href="#">2</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#"  class="paginator-active">2</a></li>
                   <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li><a href="#">6</a></li>
-                  <li><a href="#">7</a></li>
-                  <li><a href="#">8</a></li>
-                  <li><a href="#">9</a></li>
                   <li><a href="#"><i class="icon-right-arrow"></i></a></li>
                </ul>
                <ul class="mobile">
@@ -750,135 +825,8 @@
          </div>
       </div>
    </div>
-   '
-   <div style="display: none">
-      <div id="personalCabinet" class="authorization">
-         <div id="authorTabs" class="typeOfAuthor">
-            <ul>
-               <li><a href="#tabs-1">Авторизація</a></li>
-               <li><a href="#tabs-2">Реєстрація</a></li>
-            </ul>
-            <div id="tabs-1" class="author">
-               <form id="authorization" action="" method="post">
-                  <p><i class="icon-specialist-user user"></i><input type="text" name="name" placeholder="Логін"><i
-                        class="icon-asterisk asterisk"></i></p>
-                  <p><i class="icon-protection-shield shield"></i><input type="password" name="password"
-                        placeholder="Пароль"><i class="icon-asterisk asterisk"></i></p>
-                  <p><label><input type="checkbox" name="checkbox" class="checkbox"><span
-                           class="checkbox-custom"></span><span class="label">&nbsp;&nbsp;Запам’ятати
-                           мене</span></label></p>
-                  <p>CAPTCHA</p><button type="submit">Вхід</button>
-               </form><a href="#">Забули пароль?</a>
-            </div>
-            <div id="tabs-2" class="regist">
-               <form id="registration">
-                  <p><i class="icon-specialist-user user"></i><input type="text" name="name" placeholder="ПIБ"><i
-                        class="icon-asterisk asterisk"></i></p>
-                  <p><i class="icon-telephone-handle-silhouette phone"></i><input type="tel" name="tel"
-                        placeholder="тел." class="js-phone"><i class="icon-asterisk asterisk"></i></p>
-                  <p><i class="icon-envelope envelope"></i><input type="email" name="email" placeholder="email"><i
-                        class="icon-asterisk asterisk"></i></p>
-                  <p><select name="city">
-                        <option disabled selected hidden>Виберiть мiсто</option>
-                        <option>Хмельницький</option>
-                        <option>Рiвне</option>
-                     </select></p>
-                  <p>CAPTCHA</p><button type="submit">Зареєструватися</button>
-               </form>
-               <div style="display: none">
-                  <div id="authorizationConfirm">
-                     <p>Вітаємо!</p><span>Реєстрація пройшла успішно.<br>Ви можете увійти на сайт за допомогою своїх
-                        даних.</span><button type="button">ПРОДОВЖИТИ</button>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="socialAuthor">
-            <p>Увійти за допомогою соцмереж</p>
-            <ul>
-               <li><a href="https://www.facebook.com/" class="facebook"><i
-                        class="icon-facebook-logo"></i>&nbsp;&nbsp;Facebook</a></li>
-               <li><a href="https://plus.google.com/" class="gPlus"><i
-                        class="icon-google-plus-logo"></i>&nbsp;&nbsp;Google+</a></li>
-            </ul>
-         </div>
-         <div class="close">
-            <p id="authorizationClose">Повернутися до пошуку</p>
-         </div>
-      </div>
-      <div id="order"><i id="orderClose" class="icon-cancel"></i>
-         <h5>Доставка і оплата</h5><br>
-         <p>Лікарські засоби і вироби медичного призначення. Лише сертифікована
-            продукція в Хмельницькому і по всій Україні.</p><br>
-         <ul>
-            <li>Наполните корзину и оформите заказ, используя специальные
-               формы. Используйте этот способ, если вы собираетесь заказать
-               более одного наименования товара. Форма организована в три
-               простых шага:</li>
-            <li>Выбор города и доступного для этого города способа доставки</li>
-            <li>Указание адреса доставки: выбор пункта выдачи или заполнение
-               формы данными для адресной доставки</li>
-            <li>Форма персональных данных заказчика</li>
-         </ul>
-         <p>Выберите товар и на странице "наличие и бронь в аптеках" оформите
-            бронь в одной из наших точек. Система предлагает только те аптеки,
-            где товар имеется в наличии. При этом вы сможете забронировать только
-            доступное (на момент оформления заказа) количество товара в выбранной
-            точке.</p><br>
-         <p>Дополнительно рекомендуем ознакомится со специальным режимом работы
-            сайта "Ваша аптека", который отображает товары с позиции наличия в
-            выбранной аптеке.</p><br>
-         <p>Важно! Основные "фишки" нашей корзины!</p>
-      </div>
-      <div id="delivery"><i id="deliveryClose" class="icon-cancel"></i>
-         <h5>Доставка і оплата</h5><br>
-         <p>Лікарські засоби і вироби медичного призначення. Лише сертифікована
-            продукція в Хмельницькому і по всій Україні.</p><br>
-         <ul>
-            <li>Наполните корзину и оформите заказ, используя специальные
-               формы. Используйте этот способ, если вы собираетесь заказать
-               более одного наименования товара. Форма организована в три
-               простых шага:</li>
-            <li>Выбор города и доступного для этого города способа доставки</li>
-            <li>Указание адреса доставки: выбор пункта выдачи или заполнение
-               формы данными для адресной доставки</li>
-            <li>Форма персональных данных заказчика</li>
-         </ul>
-         <p>Выберите товар и на странице "наличие и бронь в аптеках" оформите
-            бронь в одной из наших точек. Система предлагает только те аптеки,
-            где товар имеется в наличии. При этом вы сможете забронировать только
-            доступное (на момент оформления заказа) количество товара в выбранной
-            точке.</p><br>
-         <p>Дополнительно рекомендуем ознакомится со специальным режимом работы
-            сайта "Ваша аптека", который отображает товары с позиции наличия в
-            выбранной аптеке.</p><br>
-         <p>Важно! Основные "фишки" нашей корзины!</p>
-      </div>
-      <div id="underOrder"><i id="underOrderClose" class="icon-cancel"></i>
-         <h5>Доставка і оплата</h5><br>
-         <p>Лікарські засоби і вироби медичного призначення. Лише сертифікована
-            продукція в Хмельницькому і по всій Україні.</p><br>
-         <ul>
-            <li>Наполните корзину и оформите заказ, используя специальные
-               формы. Используйте этот способ, если вы собираетесь заказать
-               более одного наименования товара. Форма организована в три
-               простых шага:</li>
-            <li>Выбор города и доступного для этого города способа доставки</li>
-            <li>Указание адреса доставки: выбор пункта выдачи или заполнение
-               формы данными для адресной доставки</li>
-            <li>Форма персональных данных заказчика</li>
-         </ul>
-         <p>Выберите товар и на странице "наличие и бронь в аптеках" оформите
-            бронь в одной из наших точек. Система предлагает только те аптеки,
-            где товар имеется в наличии. При этом вы сможете забронировать только
-            доступное (на момент оформления заказа) количество товара в выбранной
-            точке.</p><br>
-         <p>Дополнительно рекомендуем ознакомится со специальным режимом работы
-            сайта "Ваша аптека", который отображает товары с позиции наличия в
-            выбранной аптеке.</p><br>
-         <p>Важно! Основные "фишки" нашей корзины!</p>
-      </div>
-   </div>
+
+  
    <div id="asideButtons" class="asideButtons">
       <ul>
          <li><span class="rollUp"><i class="icon-chevron-up"></i></span></li>
@@ -1028,6 +976,47 @@
       }
 
       customElements.define('price-range', PriceRange);
+      const rangeInput = document.querySelectorAll(".range-input input"),
+priceInput = document.querySelectorAll(".price-input input"),
+range = document.querySelector(".sliders .progress");
+let priceGap = 1000;
+
+priceInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let minPrice = parseInt(priceInput[0].value),
+        maxPrice = parseInt(priceInput[1].value);
+        
+        if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
+            if(e.target.className === "input-min"){
+                rangeInput[0].value = minPrice;
+                range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
+            }else{
+                rangeInput[1].value = maxPrice;
+                range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+            }
+        }
+    });
+});
+
+rangeInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let minVal = parseInt(rangeInput[0].value),
+        maxVal = parseInt(rangeInput[1].value);
+
+        if((maxVal - minVal) < priceGap){
+            if(e.target.className === "range-min"){
+                rangeInput[0].value = maxVal - priceGap
+            }else{
+                rangeInput[1].value = minVal + priceGap;
+            }
+        }else{
+            priceInput[0].value = minVal;
+            priceInput[1].value = maxVal;
+            range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
+            range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+        }
+    });
+});
 
    </script>
 

@@ -2293,24 +2293,6 @@ body .catalog .container .content__catalog .catalog__showMore {
    justify-content: center
 }
 
-body .catalog .container .content__catalog .catalog__paginator ul li a {
-   margin: 0 5px;
-   display: block;
-   width: 40px;
-   height: 40px;
-   font: 1em/40px "PTSans-Regular";
-   color: #00929e;
-   text-align: center;
-   text-decoration: none;
-   border: 1px solid #00929e;
-   border-radius: 5px
-}
-
-body .catalog .container .content__catalog .catalog__paginator ul li .active,
-body .catalog .container .content__catalog .catalog__paginator ul li a:hover {
-   background-color: #f6f6f6
-}
-
 body .catalog .container .content__catalog .catalog__paginator .mobile,
 body .catalog__options__mobile ul li input[type=radio],
 body .certificates .container .content__certificates .firstBlock ul .large,
