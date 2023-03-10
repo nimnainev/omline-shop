@@ -1,7 +1,8 @@
-.catalog__cards{
+.catalog__cards {
    display: flex;
    flex-wrap: wrap;
 }
+
 .catalog__card {
    max-width: 210px;
    background: #FFFFFF;
@@ -17,9 +18,11 @@
    text-decoration: none;
    text-align: initial;
 }
-.catalog__card-img{
+
+.catalog__card-img {
    margin-bottom: 30px;
 }
+
 .catalog__card-descr {
    font-style: normal;
    font-weight: 400;
@@ -44,14 +47,312 @@
    line-height: 17px;
    color: #0D727E;
 }
-.catalog__card-title{
+
+.catalog__card-title {
    font-weight: 700;
    font-size: 16px;
    margin-bottom: 5px;
 }
-.catalog__top-title{
+
+.catalog__top-title {
    font-weight: 700;
-font-size: 30px;
-line-height: 37px;
-color: #1E1E1E;
+   font-size: 30px;
+   line-height: 37px;
+   color: #1E1E1E;
+}
+
+.accordion-menu {
+   width: 100%;
+   max-width: 350px;
+   background: #fff;
+   border-radius: 4px;
+}
+
+.accordion-menu li.open .dropdownlink {
+   color: #0D727E;
+}
+
+.accordion-menu li.open .dropdownlink .fa-chevron-down {
+   transform: rotate(180deg);
+}
+
+.accordion-menu li:last-child .dropdownlink {
+   border-bottom: 0;
+}
+
+.dropdownlink {
+   cursor: pointer;
+   display: block;
+   position: relative;
+   transition: all 0.4s ease-out;
+}
+
+
+.dropdownlink .fa-chevron-down {
+   right: 12px;
+   left: auto;
+}
+
+.submenuItems {
+   display: none;
+}
+
+.submenuItems a {
+   display: block;
+   transition: all 0.4s ease-out;
+   text-decoration: none;
+
+}
+
+.submenuItems a:hover {
+   color: #0D727E;
+}
+
+.catalog__asides {
+   grid-area: aside;
+   width: 90%;
+}
+
+.catalog__accordion-title {
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 22px;
+   color: #1E1E1E;
+   margin-bottom: 15px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.catalog__accordion-list {
+   padding-bottom: 20px;
+}
+
+.catalog__accordion-item {
+   margin-bottom: 10px;
+}
+
+.catalog__accordion-item:last-child {
+   margin-bottom: 0;
+}
+
+.catalog__accordion-link {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 17px;
+   color: #76737D;
+}
+
+.catalog__item {
+   background: #FFFFFF;
+   border: 1px solid #E7E6E6;
+   border-radius: 10px;
+   padding: 30px;
+}
+
+.container price-range {
+   max-width: 300px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+
+
+/* Price Range */
+price-range {
+   --thumb-size: 15px;
+   --thumb-color: #000;
+   --thumb-shadow-size: 5px;
+   --track-size: 1px;
+   --track-color: #bbb;
+   --track-highlight-color: #000;
+
+   width: 100%;
+   display: block;
+}
+
+/* Price Range Containers */
+price-range>div {
+   position: relative;
+   width: 100%;
+   height: var(--thumb-size);
+}
+
+price-range>div>div {
+   width: 100%;
+   height: var(--track-size);
+   background: var(--track-color);
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+}
+
+/* Price Range Input */
+price-range input[type="range"] {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   background: transparent;
+   border: none;
+   outline: none;
+   pointer-events: none;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+}
+
+/* Price Range Input Track */
+price-range input[type="range"]::-webkit-slider-runnable-track {
+   -webkit-appearance: none;
+   height: 5px;
+}
+
+price-range input[type="range"]::-moz-range-track {
+   -moz-appearance: none;
+   height: 5px;
+}
+
+price-range input[type="range"]::-ms-track {
+   appearance: none;
+   height: 5px;
+}
+
+/* Price Range Input Thumb */
+price-range input[type="range"]::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   margin-top: -5px;
+   width: var(--thumb-size);
+   height: var(--thumb-size);
+   background: var(--thumb-color);
+   border: none;
+   border-radius: 50%;
+   pointer-events: auto;
+   cursor: pointer;
+   box-shadow: 0 0 0 0 var(--thumb-color);
+   transition: box-shadow 0.15s ease;
+}
+
+price-range input[type="range"]::-moz-range-thumb {
+   -moz-appearance: none;
+   width: var(--thumb-size);
+   height: var(--thumb-size);
+   background: var(--thumb-color);
+   border: none;
+   border-radius: 50%;
+   pointer-events: auto;
+   cursor: pointer;
+   box-shadow: 0 0 0 0 var(--thumb-color);
+   transition: box-shadow 0.15s ease;
+}
+
+price-range input[type="range"]::-ms-thumb {
+   appearance: none;
+   width: var(--thumb-size);
+   height: var(--thumb-size);
+   background: var(--thumb-color);
+   border: none;
+   border-radius: 50%;
+   pointer-events: auto;
+   cursor: pointer;
+   box-shadow: 0 0 0 0 var(--thumb-color);
+   transition: box-shadow 0.15s ease;
+}
+
+price-range input[type="range"]::-webkit-slider-thumb:hover {
+   box-shadow: 0 0 0 var(--thumb-shadow-size) var(--thumb-color);
+}
+
+price-range input[type="range"]::-moz-range-thumb:hover {
+   box-shadow: 0 0 0 var(--thumb-shadow-size) var(--thumb-color);
+}
+
+price-range input[type="range"]::-ms-thumb:hover {
+   box-shadow: 0 0 0 var(--thumb-shadow-size) var(--thumb-color);
+}
+
+/* Price Range Output */
+.price-range output {
+   display: block;
+   margin-top: 1rem;
+   text-align: center;
+}
+
+/* контейнер */
+.checkbox-container {
+   display: block;
+   position: relative;
+   cursor: pointer;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.catalog__checkbox {
+   font-size: 14px;
+   line-height: 17px;
+   color: #1E1E1E;
+   padding-left: 36px;
+   margin-bottom: 20px;
+}
+.catalog__checkbox span{
+   color: #76737D;
+   padding-left: 3px;
+}
+/* скрываем дефолтный флажок */
+.container .check-highload {
+   position: absolute;
+   opacity: 0;
+}
+
+/* Создаем кастомный checkbox */
+.highload2 {
+   position: absolute;
+   top: -2px;
+   left: 0;
+   height: 16px;
+   width: 16px;
+   background-color: #eee;
+   border-radius: 5px;
+   border: 2px solid #76737D;
+}
+
+/* При наведении указателя мыши перекрашиваем */
+
+
+/* Когда отмечен, то красим в зеленый цвет */
+.container .check-highload:checked~.highload2 {
+   background: #0D727E;
+   border: 2px solid transparent;
+}
+
+/* Создаем когда отмечено (не видно, когда не отмечено) */
+.highload2:after {
+   content: "";
+   position: absolute;
+   display: none;
+}
+
+/* Показываем когда отмечен */
+.container .check-highload:checked~.highload2:after {
+   display: block;
+}
+
+/* Стили индикатора */
+.container .highload2:after {
+   left: 4px;
+   top: 0px;
+   width: 6px;
+   height: 10px;
+   border: solid white;
+   border-width: 0 3px 3px 0;
+   transform: rotate(45deg);
+}
+.catalog__submenuItems {
+   padding-top: 6px;
 }
