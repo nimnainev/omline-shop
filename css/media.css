@@ -1665,10 +1665,10 @@ screen and (max-device-width:1550px) {
 @media screen and (max-width:1500px),
 screen and (max-device-width:1500px) {
 
-   body .product__card .container .content__recomend .slider,
+   /* body .product__card .container .content__recomend .slider,
    body .product__card .container .content__recomend .slider ul li {
       height: 300px
-   }
+   } */
 }
 
 @media screen and (max-width:1310px),
@@ -1694,14 +1694,8 @@ screen and (max-device-width:1310px) {
 
    body .product__card .container .content__recomend .slider ul li {
       width: 225px;
-      height: 380px
    }
 
-   body .product__card .container .content__recomend .slider ul li a img {
-      margin-top: 15px;
-      width: 200px;
-      height: 200px
-   }
 
    body .product__card .container .content__recomend .slider ul li .hover {
       width: 223px
@@ -1723,6 +1717,7 @@ screen and (max-device-width:1230px) {
 
 @media screen and (max-width:1160px),
 screen and (max-device-width:1160px) {
+ 
    body .product__card .container {
       grid-template-areas: "aside breadcrumb breadcrumb" "aside productImg productImg" "aside descr descr" "aside analogue analogue" "recomend recomend recomend" "order order order"
    }

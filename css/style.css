@@ -1,5 +1,6 @@
 body{
    font: 1.625em/2em "PTSans-Regular";
+   /* font-family: 'Open Sans', sans-serif; */
 }
 body .content .container .content__aside {
    -ms-grid-row: 1;
@@ -2574,10 +2575,6 @@ body .slider {
    z-index: 0
 }
 
-body .slider img {
-   width: 100%;
-   max-height: 750px
-}
 
 body .header__main {
    width: 100%;
@@ -3757,7 +3754,7 @@ body .orderInfo button {
    outline: 0
 }
 
-body .product__card {
+/* body .product__card {
    padding-top: 25px;
    width: 100%;
    display: -ms-grid;
@@ -3765,16 +3762,13 @@ body .product__card {
    grid-template-areas: ". container .";
    -ms-grid-columns: 7% 86% 7%;
    grid-template-columns: 7% 86% 7%
-}
+} */
 
 body .product__card .container {
-   -ms-grid-row: 1;
-   -ms-grid-column: 2;
-   grid-area: container;
-   display: -ms-grid;
-   display: grid;
-   grid-template-areas: "aside breadcrumb breadcrumb" "aside productImg descr" "aside analogue analogue" "recomend recomend recomend" "order order order";
-   grid-template-columns: 25% 45% 30%
+   width: 100%;
+   max-width: 2100px;
+   padding: 0 20px;
+   margin: 0 auto;
 }
 
 body .product__card .container .content__productCard__breadcrumb {
@@ -3859,7 +3853,6 @@ body .product__card .container .content__recomend .slider ul li .hover .addFavor
 
 body .content__productCard__imgPopup .slideshowPopup .slideshow li,
 body .product__card .container .content__productCard__img .slideshow li {
-   height: 400px;
    display: -webkit-box !important;
    display: -ms-flexbox !important;
    display: flex !important;
@@ -3873,7 +3866,7 @@ body .product__card .container .content__productCard__img .slideshow li {
 }
 
 body .product__card .container .content__productCard__img .slideshow li img {
-   width: 90%;
+   height: 100%;
 }
 
 body .content__productCard__imgPopup .slideshowPopup .slideshowNav li,
@@ -4438,11 +4431,7 @@ body .product__card .container .content__recomend .slider ul li {
    box-sizing: border-box
 }
 
-body .product__card .container .content__recomend .slider ul li a img {
-   margin-top: 15px;
-   width: 175px;
-   height: 175px
-}
+
 
 body .product__card .container .content__recomend .slider ul li .hover {
    padding: 0;
